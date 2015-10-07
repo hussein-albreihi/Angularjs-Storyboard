@@ -1,0 +1,140 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+
+$color1: #f74750; //rgba(247, 71, 80, 100)
+$color2: #752d43; //rgba(117, 45, 67, 100)
+$color3: #ba8f5b; //rgba(186, 143, 91, 100)
+$color4: #a3586d; //rgba(163, 88, 109, 100)
+$color5: #ed9890; //rgba(237, 152, 144, 100)
+$color6: #66273b; //rgba(237, 152, 144, 100)
+
+.column {
+  background: $color2;
+  border: 1.5px solid $color6;
+  border-radius: 2px;
+  box-shadow: 1px 1px 0.2px $color6;
+  width: 250px;
+  float: left;
+  margin: 10px 10px;
+  padding: 0 5px;
+
+  h4 {
+    color: aliceblue;
+    padding-left: 10px;
+  }
+
+  h6 {
+    color: aliceblue;
+    cursor: pointer;
+    padding-left: 10px;
+  }
+}
+
+.item {
+  cursor: pointer;
+  margin-bottom: 10px;
+  clear:both;
+
+  .text {
+    padding-left: 10px;
+  }
+
+  .close {
+    font-size: medium;
+  }
+
+  &:hover {
+    background: #cccc99;
+  }
+}
+
+a{
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+body {
+  padding: 0;
+  background: $color2;
+  font-family: 'Roboto Slab', serif;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}

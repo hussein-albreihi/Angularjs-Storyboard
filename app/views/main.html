@@ -1,0 +1,29 @@
+<div class="board">
+  <div class="column">
+    <h4 id="doing">Doing</h4>
+    <sb-workitem ng-repeat="item in items | sortBy:'doing'" info="item" after-delete="afterDelete()"></sb-workitem>
+    <sb-workitem-form></sb-workitem-form>
+  </div>
+
+  <div class="column">
+    <h4 id="not completed">Fragmentary</h4>
+    <ui-sortable>
+      <sb-workitem ng-repeat="item in items | sortBy:'not completed'" info=item></sb-workitem>
+    </ui-sortable>
+    <sb-workitem-form></sb-workitem-form>
+  </div>
+
+  <div class="column">
+    <h4 id="idea">Implementation</h4>
+    <sb-workitem ng-repeat="item in items | sortBy:'idea'" info=item></sb-workitem>
+    <sb-workitem-form></sb-workitem-form>
+  </div>
+
+  <div class="column">
+    <h4 id="completed">Complete</h4>
+    <sb-workitem ng-repeat="item in items | sortBy:'completed'" info=item></sb-workitem>
+    <sb-workitem-form></sb-workitem-form>
+  </div>
+
+</div>
+

@@ -1,0 +1,33 @@
+<div>
+  <div class="item">
+    <span class="text" ng-click='toggleModal()'>{{info.title}}</span>
+    <span class="close" ng-click="deleteWorkitem()">×</span>
+  </div>
+
+  <modal-dialog show='modalShown' width='750px' height='60%'>
+    <div class item-form-header>
+      <h1>{{info.title}}</h1>
+      <span>Assigned to: <b>{{info.user.username}}</b></span>
+      <select name="users" ng-model="username">
+        <option ng-repeat="user in users">{{user.username}}</option>
+      </select>
+      <input type="submit" class="btn btn-default" ng-click="addUser(username, info.id)"
+             ng-disabled="workitemForm.$dirty && workitemForm.$invalid"/>
+    </div>
+    <br/>
+    <span><i>Description</i> <a edit-text></a></span>
+
+    <p>{{info.description}}</p>
+
+    <select name="status" ng-model="status">
+      <option value="doing">Doing</option>
+      <option value="not completed">Not completed</option>
+      <option value="idea">Idea</option>
+      <option value="completed">Completed</option>
+    </select>
+
+    <div>
+      <input type="submit" value="Update Status" class="btn btn-default" ng-click="updateItem(status, info.id)"/>
+    </div>
+  </modal-dialog>
+</div>

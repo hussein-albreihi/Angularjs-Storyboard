@@ -1,0 +1,26 @@
+<h6 ng-click='toggleModal()'>Add card..</h6>
+	<modal-dialog show='modalShown' width='750px' height='60%'>
+	<form name="workitemForm" ng-submit="sendForm()">
+		<div class="form-group">
+			<label for="title">Title</label>
+			<input name="title" type="text" class="form-control" ng-model="item.title" required/>
+			<p class="alert alert-danger" ng-show="workitemForm.title.$error.required && workitemForm.title.$dirty" class="alert alert-warning">
+				Required</p>
+			</div>
+			<div class="form-group">
+				<label for="description">Description</label>
+				<input name="description" type="text" class="form-control" ng-model="item.description" required/>
+				<p class="alert alert-danger" ng-show="workitemForm.description.$error.required && workitemForm.description.$dirty" class="alert alert-warning">
+					Required</p>
+				</div>
+				<div class="form-group">
+					<label for="status">Status</label>
+					<select data-ng-options="o.name for o in options" data-ng-model="selectedOption"></select>
+					
+					<p class="alert alert-danger" ng-show="workitemForm.status.$error.required && workitemForm.status.$dirty" class="alert alert-warning">
+						Required</p>
+					</div>
+					<input type="submit" class="btn btn-default" ng-disabled="workitemForm.$dirty && workitemForm.$invalid" />
+				</form>
+			</modal-dialog>
+		</div>
